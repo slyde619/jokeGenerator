@@ -1,0 +1,93 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+:root {
+  --bg-color: hsl(234, 90%, 8%);
+  --primary-color: hsl(236, 92%, 71%);
+  --text-color: hsl(235, 89%, 93%);
+}
+
+html {
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+  line-height: 1.5;
+  font-family: "PT Sans", sans-serif;
+  font-size: 1rem;
+  font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
+}
+
+header {
+  justify-self: flex-start;
+  margin-block-end: 2em;
+  text-transform: capitalize;
+}
+
+header h1{
+    background: linear-gradient(120deg, var(--primary-color), var(--text-color));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+}
+
+.card{
+    background: var(--primary-color);
+    padding: 1.4em 1.8em;
+    border-radius: 41px;
+}
+
+.emoji{
+    text-align: center;
+    font-size: 4.55rem;
+}
+
+.joke-content{
+    margin: 1.4em 0;
+    max-width: 43ch;
+    text-align: center;
+    opacity: 0;
+}
+
+.fadeIn{
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+.btn{
+    display: block;
+    text-align: center;
+    border: 0;
+    background: var(--bg-color);
+    padding: .7em 2em;
+    outline: none;
+    border-radius: 20px;
+    color: var(--text-color);
+    margin: 0 auto;
+    font-size: 1.27rem;
+    cursor: pointer;
+    text-transform: capitalize;
+    font-weight: 800;
+    transition: transform .3s ease-in-out;
+    box-shadow: 0 4px 8px var(--bg-color);
+}
+
+.btn:hover{
+    transform: scale(1.03);
+}
